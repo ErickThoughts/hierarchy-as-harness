@@ -1,0 +1,452 @@
+{
+  "summary": {
+    "experiment": "arxiv_predcomplete_retrieval_aligned_realdata_logic",
+    "n_tasks": 2,
+    "config": {
+      "test_jsonl": "/Users/brot/Desktop/实习/ontosAI/tree/agent_experiment_delivery/experiments/bodyrich_delivery_kit/delivery/arxiv_aligned_retrieval_20260513/data_refs/test_data_full_merged_pred_complete.jsonl",
+      "tasks": "/Users/brot/Desktop/实习/ontosAI/tree/agent_experiment_delivery/experiments/bodyrich_delivery_kit/delivery/arxiv_aligned_retrieval_20260513/data_refs/tasks_arxiv_bodyrich_150_pred_complete_for_runner.jsonl",
+      "budget_chars": 300,
+      "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+      "retrieval": "dense",
+      "hierarchy_unit": "length_normalized",
+      "hier_score_mode": "content_only",
+      "hier_route_m": 3,
+      "hier_window_chars": 220,
+      "flat_unit": "flat_react_multiquery",
+      "llm_compose": false,
+      "task_success_judge": null
+    },
+    "gold_hier": {
+      "chunk_hit@1_mean": 0.5,
+      "mrr_chunks_mean": 0.5,
+      "coverage_budget_lenient_mean": 0.25,
+      "precision@1_line_mean": 0.5,
+      "precision@3_line_mean": 0.25,
+      "precision@5_line_mean": 0.25,
+      "mrr_line_mean": 0.5,
+      "hit@5_line_mean": 0.5,
+      "ndcg@10_line_mean": 0.25,
+      "coverage_line_mean": 0.25,
+      "evidence_chars_actual_mean": 300.0,
+      "n_chunks_kept_mean": 1.5
+    },
+    "pred_hier": {
+      "chunk_hit@1_mean": 0.0,
+      "mrr_chunks_mean": 0.0,
+      "coverage_budget_lenient_mean": 0.0,
+      "precision@1_line_mean": 0.0,
+      "precision@3_line_mean": 0.0,
+      "precision@5_line_mean": 0.0,
+      "mrr_line_mean": 0.0,
+      "hit@5_line_mean": 0.0,
+      "ndcg@10_line_mean": 0.0,
+      "coverage_line_mean": 0.0,
+      "evidence_chars_actual_mean": 300.0,
+      "n_chunks_kept_mean": 1.0
+    },
+    "flat": {
+      "chunk_hit@1_mean": 0.5,
+      "mrr_chunks_mean": 0.5,
+      "coverage_budget_lenient_mean": 0.25,
+      "precision@1_line_mean": 0.5,
+      "precision@3_line_mean": 0.16666666666666666,
+      "precision@5_line_mean": 0.1,
+      "mrr_line_mean": 0.5,
+      "hit@5_line_mean": 0.5,
+      "ndcg@10_line_mean": 0.25,
+      "coverage_line_mean": 0.25,
+      "evidence_chars_actual_mean": 296.5,
+      "n_chunks_kept_mean": 1.0
+    },
+    "delta_pred_minus_flat": {
+      "chunk_hit@1_mean": -0.5,
+      "mrr_chunks_mean": -0.5,
+      "coverage_budget_lenient_mean": -0.25,
+      "precision@1_line_mean": -0.5,
+      "precision@3_line_mean": -0.16666666666666666,
+      "precision@5_line_mean": -0.1,
+      "mrr_line_mean": -0.5,
+      "hit@5_line_mean": -0.5,
+      "ndcg@10_line_mean": -0.25,
+      "coverage_line_mean": -0.25,
+      "evidence_chars_actual_mean": 3.5,
+      "n_chunks_kept_mean": 0.0
+    },
+    "delta_gold_minus_flat": {
+      "chunk_hit@1_mean": 0.0,
+      "mrr_chunks_mean": 0.0,
+      "coverage_budget_lenient_mean": 0.0,
+      "precision@1_line_mean": 0.0,
+      "precision@3_line_mean": 0.08333333333333334,
+      "precision@5_line_mean": 0.15,
+      "mrr_line_mean": 0.0,
+      "hit@5_line_mean": 0.0,
+      "ndcg@10_line_mean": 0.0,
+      "coverage_line_mean": 0.0,
+      "evidence_chars_actual_mean": 3.5,
+      "n_chunks_kept_mean": 0.5
+    },
+    "delta_pred_minus_gold": {
+      "chunk_hit@1_mean": -0.5,
+      "mrr_chunks_mean": -0.5,
+      "coverage_budget_lenient_mean": -0.25,
+      "precision@1_line_mean": -0.5,
+      "precision@3_line_mean": -0.25,
+      "precision@5_line_mean": -0.25,
+      "mrr_line_mean": -0.5,
+      "hit@5_line_mean": -0.5,
+      "ndcg@10_line_mean": -0.25,
+      "coverage_line_mean": -0.25,
+      "evidence_chars_actual_mean": 0.0,
+      "n_chunks_kept_mean": -0.5
+    },
+    "per_type_gold_hier": {
+      "cross_section_conflict": {
+        "n": 1,
+        "chunk_hit@1_mean": 1.0,
+        "mrr_chunks_mean": 1.0,
+        "coverage_budget_lenient_mean": 0.5,
+        "precision@1_line_mean": 1.0,
+        "precision@3_line_mean": 0.5,
+        "precision@5_line_mean": 0.5,
+        "mrr_line_mean": 1.0,
+        "hit@5_line_mean": 1.0,
+        "ndcg@10_line_mean": 0.5,
+        "coverage_line_mean": 0.5,
+        "evidence_chars_actual_mean": 300.0,
+        "n_chunks_kept_mean": 2.0
+      },
+      "scope_collection": {
+        "n": 1,
+        "chunk_hit@1_mean": 0.0,
+        "mrr_chunks_mean": 0.0,
+        "coverage_budget_lenient_mean": 0.0,
+        "precision@1_line_mean": 0.0,
+        "precision@3_line_mean": 0.0,
+        "precision@5_line_mean": 0.0,
+        "mrr_line_mean": 0.0,
+        "hit@5_line_mean": 0.0,
+        "ndcg@10_line_mean": 0.0,
+        "coverage_line_mean": 0.0,
+        "evidence_chars_actual_mean": 300.0,
+        "n_chunks_kept_mean": 1.0
+      }
+    },
+    "per_type_pred_hier": {
+      "cross_section_conflict": {
+        "n": 1,
+        "chunk_hit@1_mean": 0.0,
+        "mrr_chunks_mean": 0.0,
+        "coverage_budget_lenient_mean": 0.0,
+        "precision@1_line_mean": 0.0,
+        "precision@3_line_mean": 0.0,
+        "precision@5_line_mean": 0.0,
+        "mrr_line_mean": 0.0,
+        "hit@5_line_mean": 0.0,
+        "ndcg@10_line_mean": 0.0,
+        "coverage_line_mean": 0.0,
+        "evidence_chars_actual_mean": 300.0,
+        "n_chunks_kept_mean": 1.0
+      },
+      "scope_collection": {
+        "n": 1,
+        "chunk_hit@1_mean": 0.0,
+        "mrr_chunks_mean": 0.0,
+        "coverage_budget_lenient_mean": 0.0,
+        "precision@1_line_mean": 0.0,
+        "precision@3_line_mean": 0.0,
+        "precision@5_line_mean": 0.0,
+        "mrr_line_mean": 0.0,
+        "hit@5_line_mean": 0.0,
+        "ndcg@10_line_mean": 0.0,
+        "coverage_line_mean": 0.0,
+        "evidence_chars_actual_mean": 300.0,
+        "n_chunks_kept_mean": 1.0
+      }
+    },
+    "per_type_flat": {
+      "cross_section_conflict": {
+        "n": 1,
+        "chunk_hit@1_mean": 1.0,
+        "mrr_chunks_mean": 1.0,
+        "coverage_budget_lenient_mean": 0.5,
+        "precision@1_line_mean": 1.0,
+        "precision@3_line_mean": 0.3333333333333333,
+        "precision@5_line_mean": 0.2,
+        "mrr_line_mean": 1.0,
+        "hit@5_line_mean": 1.0,
+        "ndcg@10_line_mean": 0.5,
+        "coverage_line_mean": 0.5,
+        "evidence_chars_actual_mean": 293.0,
+        "n_chunks_kept_mean": 1.0
+      },
+      "scope_collection": {
+        "n": 1,
+        "chunk_hit@1_mean": 0.0,
+        "mrr_chunks_mean": 0.0,
+        "coverage_budget_lenient_mean": 0.0,
+        "precision@1_line_mean": 0.0,
+        "precision@3_line_mean": 0.0,
+        "precision@5_line_mean": 0.0,
+        "mrr_line_mean": 0.0,
+        "hit@5_line_mean": 0.0,
+        "ndcg@10_line_mean": 0.0,
+        "coverage_line_mean": 0.0,
+        "evidence_chars_actual_mean": 300.0,
+        "n_chunks_kept_mean": 1.0
+      }
+    },
+    "candidate_pools": {
+      "gold_hier": {
+        "n_docs": 1,
+        "n_chunks": 398,
+        "path_depth": {
+          "n": 398,
+          "mean": 1.4271356783919598,
+          "max": 3,
+          "hist": {
+            "1": 280,
+            "2": 66,
+            "3": 52
+          }
+        }
+      },
+      "pred_hier": {
+        "n_docs": 1,
+        "n_chunks": 346,
+        "path_depth": {
+          "n": 346,
+          "mean": 1.4566473988439306,
+          "max": 3,
+          "hist": {
+            "1": 210,
+            "2": 114,
+            "3": 22
+          }
+        }
+      },
+      "flat": {
+        "n_docs": 1,
+        "n_chunks": 58
+      }
+    }
+  },
+  "rows": [
+    {
+      "task_idx": 1,
+      "query": "List all the sample names and their corresponding sizes used in the iterative development of CUGA as described in the paper.",
+      "doc_id": "2503.01861_main",
+      "task_type": "scope_collection",
+      "gold_nodes": [
+        "2503.01861_main:L172",
+        "2503.01861_main:L173",
+        "2503.01861_main:L174",
+        "2503.01861_main:L175",
+        "2503.01861_main:L176"
+      ],
+      "candidate_counts": {
+        "gold_hier": 199,
+        "pred_hier": 173,
+        "flat": 29
+      },
+      "candidate_type": {
+        "gold_hier": "length_normalized:content_only",
+        "pred_hier": "length_normalized:content_only",
+        "flat": "flat_react_multiquery"
+      },
+      "gold_hier": {
+        "evidence_chars_actual": 300,
+        "n_chunks_kept": 1,
+        "truncated_last": true,
+        "kept_chunk_ids": [
+          "2503.01861_main:L264__path__w0__partial"
+        ],
+        "retrieved_nodes": [
+          "2503.01861_main:L264"
+        ],
+        "evidence_preview": "[2503.01861_main:L264__path__w0]\nPATH: In this paper, we have presented the current status of our work on developing IBM CUGA. We detailed the iterative evolution of our agentic architecture, the methodology and tools that facilitated rapid learning and cost-effective improvements, and key lessons l",
+        "budget": {
+          "chunk_hit@1": 0.0,
+          "mrr_chunks": 0.0,
+          "coverage_budget_lenient": 0.0,
+          "n_chunks_kept": 1.0
+        },
+        "line_retrieval": {
+          "coverage": 0.0,
+          "mrr": 0.0,
+          "ndcg@10": 0.0,
+          "hit@5": 0.0,
+          "precision@1": 0.0,
+          "precision@3": 0.0,
+          "precision@5": 0.0
+        }
+      },
+      "pred_hier": {
+        "evidence_chars_actual": 300,
+        "n_chunks_kept": 1,
+        "truncated_last": true,
+        "kept_chunk_ids": [
+          "2503.01861_main:L264__path__w0__partial"
+        ],
+        "retrieved_nodes": [
+          "2503.01861_main:L264"
+        ],
+        "evidence_preview": "[2503.01861_main:L264__path__w0]\nPATH: In this paper, we have presented the current status of our work on developing IBM CUGA. We detailed the iterative evolution of our agentic architecture, the methodology and tools that facilitated rapid learning and cost-effective improvements, and key lessons l",
+        "budget": {
+          "chunk_hit@1": 0.0,
+          "mrr_chunks": 0.0,
+          "coverage_budget_lenient": 0.0,
+          "n_chunks_kept": 1.0
+        },
+        "line_retrieval": {
+          "coverage": 0.0,
+          "mrr": 0.0,
+          "ndcg@10": 0.0,
+          "hit@5": 0.0,
+          "precision@1": 0.0,
+          "precision@3": 0.0,
+          "precision@5": 0.0
+        }
+      },
+      "flat": {
+        "evidence_chars_actual": 300,
+        "n_chunks_kept": 1,
+        "truncated_last": true,
+        "kept_chunk_ids": [
+          "2503.01861_main:FLAT224__partial"
+        ],
+        "retrieved_nodes": [
+          "2503.01861_main:L254",
+          "2503.01861_main:L255",
+          "2503.01861_main:L263"
+        ],
+        "evidence_preview": "[2503.01861_main:FLAT224]\n        \\bottomrule\n    \\end{tabular}\n\\section{Conclusion}\nIn this paper, we have presented the current status of our work on developing IBM CUGA. We detailed the iterative evolution of our agentic architecture, the methodology and tools that facilitated rapid learning and ",
+        "budget": {
+          "chunk_hit@1": 0.0,
+          "mrr_chunks": 0.0,
+          "coverage_budget_lenient": 0.0,
+          "n_chunks_kept": 1.0
+        },
+        "line_retrieval": {
+          "coverage": 0.0,
+          "mrr": 0.0,
+          "ndcg@10": 0.0,
+          "hit@5": 0.0,
+          "precision@1": 0.0,
+          "precision@3": 0.0,
+          "precision@5": 0.0
+        }
+      }
+    },
+    {
+      "task_idx": 2,
+      "query": "Compare the stated performance metrics for the AppWorld benchmark between the Introduction section and the Results section.",
+      "doc_id": "2503.01861_main",
+      "task_type": "cross_section_conflict",
+      "gold_nodes": [
+        "2503.01861_main:L45",
+        "2503.01861_main:L250"
+      ],
+      "candidate_counts": {
+        "gold_hier": 199,
+        "pred_hier": 173,
+        "flat": 29
+      },
+      "candidate_type": {
+        "gold_hier": "length_normalized:content_only",
+        "pred_hier": "length_normalized:content_only",
+        "flat": "flat_react_multiquery"
+      },
+      "gold_hier": {
+        "evidence_chars_actual": 300,
+        "n_chunks_kept": 2,
+        "truncated_last": true,
+        "kept_chunk_ids": [
+          "2503.01861_main:L45__path__w0",
+          "2503.01861_main:L238__path__w0__partial"
+        ],
+        "retrieved_nodes": [
+          "2503.01861_main:L45",
+          "2503.01861_main:L238"
+        ],
+        "evidence_preview": "[2503.01861_main:L45__path__w0]\nPATH: AppWorld             & 48.2\\% scenario completion rate    & API             & Evaluates API tasks \\\\\nAppWorld             & 48.2\\% scenario completion rate    & API             & Evaluates API tasks \\\\\n\n[2503.01861_main:L238__path__w0]\nPATH: \\caption{CUGA perfor",
+        "budget": {
+          "chunk_hit@1": 1.0,
+          "mrr_chunks": 1.0,
+          "coverage_budget_lenient": 0.5,
+          "n_chunks_kept": 2.0
+        },
+        "line_retrieval": {
+          "coverage": 0.5,
+          "mrr": 1.0,
+          "ndcg@10": 0.5,
+          "hit@5": 1.0,
+          "precision@1": 1.0,
+          "precision@3": 0.5,
+          "precision@5": 0.5
+        }
+      },
+      "pred_hier": {
+        "evidence_chars_actual": 300,
+        "n_chunks_kept": 1,
+        "truncated_last": true,
+        "kept_chunk_ids": [
+          "2503.01861_main:L238__path__w0__partial"
+        ],
+        "retrieved_nodes": [
+          "2503.01861_main:L238"
+        ],
+        "evidence_preview": "[2503.01861_main:L238__path__w0]\nPATH: \\caption{CUGA performance on the AppWorld benchmark across increasing levels of API complexity, showing strong task and scenario completion rates and adaptive interaction strategies under both normal and challenge settings.}\n\\caption{CUGA performance on the App",
+        "budget": {
+          "chunk_hit@1": 0.0,
+          "mrr_chunks": 0.0,
+          "coverage_budget_lenient": 0.0,
+          "n_chunks_kept": 1.0
+        },
+        "line_retrieval": {
+          "coverage": 0.0,
+          "mrr": 0.0,
+          "ndcg@10": 0.0,
+          "hit@5": 0.0,
+          "precision@1": 0.0,
+          "precision@3": 0.0,
+          "precision@5": 0.0
+        }
+      },
+      "flat": {
+        "evidence_chars_actual": 293,
+        "n_chunks_kept": 1,
+        "truncated_last": false,
+        "kept_chunk_ids": [
+          "2503.01861_main:FLAT40"
+        ],
+        "retrieved_nodes": [
+          "2503.01861_main:L45",
+          "2503.01861_main:L46",
+          "2503.01861_main:L47",
+          "2503.01861_main:L55",
+          "2503.01861_main:L56",
+          "2503.01861_main:L57",
+          "2503.01861_main:L59",
+          "2503.01861_main:L60"
+        ],
+        "evidence_preview": "[2503.01861_main:FLAT40]\nAppWorld             & 48.2\\% scenario completion rate    & API             & Evaluates API tasks \\\\\n\\bottomrule\n\\end{tabular}\n\\begin{figure}[h!]\n    \\centering\n    \\includegraphics[width=1.0\\textwidth]{images/Lifecycle.png}\n    \\label{fig:cuga_lifecycle}\n\\end{figure}",
+        "budget": {
+          "chunk_hit@1": 1.0,
+          "mrr_chunks": 1.0,
+          "coverage_budget_lenient": 0.5,
+          "n_chunks_kept": 1.0
+        },
+        "line_retrieval": {
+          "coverage": 0.5,
+          "mrr": 1.0,
+          "ndcg@10": 0.5,
+          "hit@5": 1.0,
+          "precision@1": 1.0,
+          "precision@3": 0.3333333333333333,
+          "precision@5": 0.2
+        }
+      }
+    }
+  ]
+}
